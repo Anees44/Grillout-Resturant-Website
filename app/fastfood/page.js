@@ -1,12 +1,12 @@
-import BurgerCategory from '../burger/page'
-import PizzaCategory from '../pizza/page'
+import Pizza from '@/Components/Pizza'
 import React from 'react'
+import Burger from '@/Components/Burgers'
 
 const page = () => {
   return (
     <div>
-      <PizzaCategory/>
-      <BurgerCategory/>
+      <Pizza/>
+      <Burger/>
     </div>
   )
 }

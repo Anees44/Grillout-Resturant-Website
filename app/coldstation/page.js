@@ -1,5 +1,5 @@
-// import Ice_Cream from '@/Components/Ice_Cream'
-import Ice_Cream from '../icecream/page'
+
+import Ice_Cream from '@/Components/Ice_Cream'
 import React from 'react'
 
 const page = () => {
