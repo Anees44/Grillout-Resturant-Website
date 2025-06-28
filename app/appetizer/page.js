@@ -1,10 +1,10 @@
 import Appetizer from '@/Components/Appetizer'
 import React from 'react'
 
-function page() {
+function appetizer() {
   return (
     <Appetizer/>
   )
 }
 
-export default page
+export default appetizer
