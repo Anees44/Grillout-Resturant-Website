@@ -36,10 +36,44 @@
 
 
 
-import "./globals.css";
-import localFont from "next/font/local";
+// import "./globals.css";
+// import localFont from "next/font/local";
 
-// Load custom fonts
+// // Load custom fonts
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   display: "swap",
+// });
+
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   display: "swap",
+// });
+
+// export const metadata = {
+//   title: "GrillOut - Official Website",
+//   description: "Welcome to GrillOut – Savor the Flavor!",
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+//       <body className="bg-background text-foreground antialiased">
+//         {children}
+//       </body>
+//     </html>
+//   );
+// }
+
+
+
+
+import localFont from "next/font/local";
+import "./globals.css";
+
+// Load Geist Sans and Mono as local variable fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -52,15 +86,20 @@ const geistMono = localFont({
   display: "swap",
 });
 
+// Metadata for SEO and browser tab
 export const metadata = {
-  title: "GrillOut - Official Website",
-  description: "Welcome to GrillOut – Savor the Flavor!",
+  title: "GrilllOut - Official Website",
+  description: "Welcome to GrilllOut – Explore our delicious menu of burgers, wraps, steaks, and more!",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-background text-foreground antialiased">
+    <html lang="en">
+      <head />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
